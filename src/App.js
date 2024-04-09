@@ -27,11 +27,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <Sidebar />
           <main className="content">
             <TopBar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/sidebar" element={<Sidebar />} />
               <Route path="/team" element={<Team />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/contacts" element={<Contacts />} />
