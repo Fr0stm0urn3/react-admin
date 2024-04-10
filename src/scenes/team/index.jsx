@@ -42,8 +42,7 @@ const Team = () => {
       renderCell: ({ row: { access } }) => {
         return (
           <Box
-            width="60%"
-            m="0 auto"
+            width="65%"
             p="5px"
             display="flex"
             justifyContent="center"
