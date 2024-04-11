@@ -18,13 +18,15 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined"
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined"
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
 
-const Item = ({ title, to, icon, selected, setSelected }) => {
+const Item = ({ title, to, icon, setSelected }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
 
+  const pathname = window.location.pathname
+
   return (
     <MenuItem
-      active={selected === title}
+      active={to === pathname}
       style={{ color: colors.grey[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -39,7 +41,7 @@ const Sidebar = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
   const [isCollapsed, setIsCollapsed] = useState(false)
-  const [selected, setSelected] = useState("Dashboard")
+  const [selected, setSelected] = useState("/")
 
   return (
     <Box
